@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-zltd-sdk-scanner",
+  "version": "1.0.0",
+  "description": "Cordova ZLTD SDK Scanner plugin.",
+  "cordova": {
+    "id": "cordova-plugin-zltd-sdk-scanner",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "zltd",
+    "scanner",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=7.1.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=6.3.0"
+    }
+  ],
+  "author": "wiskind.cn",
+  "license": "ISC"
+}

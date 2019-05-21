@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-zltd-sdk-scanner" version="1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 引擎 -->
+    <engines>
+        <engine name="cordova" version=">=7.1.0" />
+        <engine name="cordova-android" version=">=6.3.0" />
+    </engines>
+
+    <!-- 描述信息 -->
+    <name>ZLTD SDK Scanner</name>
+    <description>Cordova ZLTD SDK Scanner plugin</description>
+    <author>wiskind.cn</author>
+    <keywords>cordova,zltd,scanner</keywords>
+
+    <!-- JS模块 -->
+    <js-module src="www/zltdsdkscanner.js" name="zltdsdkscanner">
+        <clobbers target="cordova.plugins.zltdsdkscanner" />
+    </js-module>
+
+    <!-- Android平台 -->
+    <platform name="android">
+
+        <!-- 插件配置 -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <!-- 类映射 -->
+            <feature name="ZltdSdkScannerPlugin">
+                <param name="android-package" value="cn.wiskind.cordova.plugin.zltdsdkscanner.ZltdSdkScannerPlugin" />
+            </feature>
+        </config-file>
+
+        <!-- 安卓配置清单 -->
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+
+        <!-- 源文件 -->
+        <source-file src="src/android/ZltdSdkScannerPlugin.java" target-dir="src/cn/wiskind/cordova/plugin/zltdsdkscanner" />
+        <source-file src="src/android/SoundUtils.java" target-dir="src/cn/wiskind/cordova/plugin/zltdsdkscanner" />
+
+        <!-- 资源 -->
+        <source-file src="raw/android/success.wav" target-dir="res/raw" />
+
+        <!-- 依赖库 -->
+        <framework src="zltd.sdk.scanner:zltd-sdk-scanner-core:1.0.0" />
+
+    </platform>
+
+</plugin>
